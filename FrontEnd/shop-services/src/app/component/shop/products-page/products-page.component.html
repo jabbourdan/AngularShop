@@ -1,0 +1,54 @@
+<div>
+  <!-- Filter Dropdown -->
+  <div class="all-filter">
+    <div class="filter-container">
+      <select [(ngModel)]="selectedFilter" (change)="onFilterChange()" class="filter-dropdown">
+        <option value="makeup">Makeup</option>
+        <option value="digital">Digital</option>
+        <option value="kitchen">Kitchen</option>
+      </select>
+  
+      <!-- Clear Filter Button (X) -->
+      <button *ngIf="selectedFilter" class="clear-filter" (click)="clearFilter()">X</button>
+    </div>
+  
+    <!-- Sort Dropdown -->
+    <div class="sort-container">
+      <select [(ngModel)]="selectedSort" (change)="onSortChange()" class="sort-dropdown">
+        <option value="asc">Price Ascending</option>
+        <option value="desc">Price Descending</option>
+      </select>
+    </div>
+  </div>
+  
+
+  <!-- Content Grid for Products -->
+  <div class="content-grid">
+    <div *ngFor="let item of itemsList" class="product-card">
+      <app-products [itemId]="item.id" [title]="item.title" [price]="item.price" [type]="item.type" [actionType]="'add'"
+        (itemClicked)="addItemToCard($event)" (itemDeleteClicked)="deleteItemToList($event)">
+      </app-products>
+    </div>
+  </div>
+
+  <!-- Floating Add Button -->
+  <button class="floating-add-btn" (click)="openAddProductForm()">+</button>
+
+  <!-- Modal for Adding a New Product -->
+  <div *ngIf="showForm" class="modal-overlay">
+    <div class="modal-content">
+      <h2>Add New Product</h2>
+      <input [(ngModel)]="newProductTitle" placeholder="Product Title" class="modal-input" />
+      <input [(ngModel)]="newProductPrice" placeholder="Product Price" type="number" class="modal-input" />
+      <select [(ngModel)]="newProductType" class="modal-input">
+        <option value="makeup">Makeup</option>
+        <option value="digital">Digital</option>
+        <option value="kitchen">Kitchen</option>
+      </select>
+      <div class="modal-actions">
+        <button class="btn-cancel" (click)="closeForm()">Cancel</button>
+        <button class="btn-add" (click)="submitProduct()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

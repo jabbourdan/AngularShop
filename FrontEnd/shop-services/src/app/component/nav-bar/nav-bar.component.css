@@ -1,0 +1,18 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAD992;
+    padding: 15px;
+}
+
+.logo img {
+    width: 70px;
+    border-radius: 10px;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="productDetails; else loadingTemplate">
+    <div class="product-details">
+      <h1>{{ productDetails.title }}</h1>
+  
+      <!-- Product Image -->
+      <div class="product-image">
+        <img [src]="imageUrl" alt="{{ productDetails.title }}" class="product-img" />
+      </div>
+  
+      <!-- Product Price -->
+      <p><strong>Price:</strong> {{ productDetails.price }}$</p>
+  
+      <!-- Product Type -->
+      <p><strong>Type:</strong> {{ productDetails.type }}</p>
+  
+      <!-- Product ID (Optional) -->
+      <p><strong>ID:</strong> {{ productDetails.id }}</p>
+  
+    </div>
+  </div>
+  
+  <!-- Loading Spinner or Message -->
+  <ng-template #loadingTemplate>
+    <p>Loading product details...</p>
+  </ng-template>
+  

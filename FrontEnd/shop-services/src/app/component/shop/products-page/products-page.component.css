@@ -1,0 +1,132 @@
+/* All filter container to use grid layout */
+.all-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns, one for filter and one for sort */
+  gap: 20px; /* Adds space between the grid items */
+  margin-bottom: 20px; /* Adds space below the filter section */
+  align-items: center; /* Vertically centers items */
+}
+
+/* Filter and Sort Containers */
+.filter-container, .sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the dropdown and button */
+}
+
+/* Dropdown styles */
+.filter-dropdown, .sort-dropdown {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px;
+}
+
+/* Clear Filter Button (X) */
+.clear-filter {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.clear-filter:hover {
+  color: #f00;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Floating Add Button */
+.floating-add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-cancel, .btn-add {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #d32f2f;
+}
+
+.btn-add {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #388e3c;
+}

@@ -1,0 +1,31 @@
+<div class="product-item" [routerLink]="['/shop/product/details', itemId]">
+  <!-- Product Image -->
+  <div class="product-image">
+    <img [src]="imageUrl" alt="{{ title }}" class="product-img" />
+  </div>
+
+  <!-- Product Title -->
+  <div class="product-info">
+    <p class="title">{{ title }}</p>
+  </div>
+
+  <!-- Product Type -->
+  <div class="type">
+    <p class="type">{{ type }}</p>
+  </div>
+
+  <!-- Product Price -->
+  <div class="price">
+    <p class="price">{{ price }}$</p>
+  </div>
+
+  <!-- Add/Remove Button -->
+  <div *ngIf="actionType !== 'delete'" class="add-button">
+    <button (click)="addItem($event)">Add</button>
+  </div>
+
+  <!-- Delete Button -->
+  <div class="add-button">
+    <button (click)="deleteItemToList($event)">Remove</button>
+  </div>
+</div>

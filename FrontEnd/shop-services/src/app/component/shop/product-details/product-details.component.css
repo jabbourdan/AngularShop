@@ -1,0 +1,46 @@
+/* Styling for product details */
+.product-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-details h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 200px; /* adjust as needed */
+    height: auto; /* keeps the aspect ratio */
+    border-radius: 10px; /* optional: smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: subtle shadow */
+    margin-bottom: 20px; /* space between image and text */
+  }
+
+.product-details p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

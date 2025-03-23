@@ -1,0 +1,53 @@
+{
+    "productsList": [
+      {
+        "id": 0,
+        "title": "Book",
+        "price": 100,
+        "selected": false
+      },
+      {
+        "id": 1,
+        "title": "Computer",
+        "price": 120,
+        "selected": false
+      },
+      {
+        "id": 2,
+        "title": "Calculator",
+        "price": 20,
+        "selected": false
+      },
+      {
+        "id": 3,
+        "title": "Phone",
+        "price": 100,
+        "selected": false
+      },
+      {
+        "id": 4,
+        "title": "Bag",
+        "price": 150,
+        "selected": false
+      },
+      {
+        "id": 5,
+        "title": "T-shirt",
+        "price": 240,
+        "selected": false
+      },
+      {
+        "id": 6,
+        "title": "Laptop",
+        "price": 2700,
+        "selected": false
+      },
+      {
+        "id": 7,
+        "title": "Earpods",
+        "price": 700,
+        "selected": false
+      }
+    ]
+  }
+  

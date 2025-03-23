@@ -1,0 +1,16 @@
+<div class="total-price">
+  <span>Total Price: </span>
+  {{ total }}$
+</div>
+<div>
+    <div *ngFor="let item of itemsList" class="product">
+        <app-products 
+          [itemId]="item.id" 
+          [title]="item.title" 
+          [price]="item.price" 
+          [actionType]="'delete'"
+          (itemDeleteClicked)="deleteItemFromCart($event)">
+        </app-products>
+      </div>
+
+</div>
